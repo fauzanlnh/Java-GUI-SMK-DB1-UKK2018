@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportDisposisi" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0f1e693a-3e24-4ff3-b299-e7ae7c428454">
+	<property name="ireport.zoom" value="0.6818181818181818"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tgl" class="java.lang.String"/>
+	<parameter name="tgl2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from t_disposisi where tanggal_surat between $P{tgl} AND $P{tgl2}]]>
+	</queryString>
+	<field name="no_surat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_surat" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="perihal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tujuan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="deskripsi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="8e4f4102-1654-4f53-9ae7-d077382a6a63"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="8e003f40-d743-41ac-a5d3-c556868cf8b1"/>
+					<textElement>
+						<font fontName="Poor Richard" size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Bird Mail]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="cc210762-c279-43dd-98e7-2de4ab634ee3"/>
+					<textElement textAlignment="Right">
+						<font fontName="Poor Richard" size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Report Disposisi]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="d7aea8a6-0901-4320-b8a4-fdfec3f4c5f2"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c9668a59-c634-4478-929c-fa4e78a9097b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="70b01af0-e6f4-433e-a2b2-16ddc52a1afb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="902769f2-2f80-4457-95f9-9720c480a72c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perihal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a0efaf64-6fe6-442d-b500-da656567932a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tujuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="d3fb9d90-a99f-4b24-b3f8-c50af7e30b35"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deskripsi]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="ead4af23-5bca-46d5-91cd-d86cf38aebf8"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="111" height="20" uuid="90ca0d36-b349-4bb3-9ab7-577dd62b447a"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_surat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="111" y="0" width="111" height="20" uuid="1460d68a-7fe0-4a07-a06f-90982e715bcc"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal_surat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="222" y="0" width="111" height="20" uuid="b465169c-566c-4064-9b71-929e0f44cd79"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{perihal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="333" y="0" width="111" height="20" uuid="1b7ec789-ea38-4cc5-afc5-5e1b14a6d8e1"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tujuan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="444" y="0" width="111" height="20" uuid="cc23eea8-83c6-4c6e-b4bc-f396866aa25d"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deskripsi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="61cca048-4255-4535-b1ac-1f3f100857ba"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="de015cb7-e9bf-4bc9-a965-db2d73125799"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="5d6d1e45-469b-4d4d-8f3c-6f46e40aecce"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

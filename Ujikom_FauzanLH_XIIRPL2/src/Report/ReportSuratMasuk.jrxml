@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportSuratMasuk" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="35948a19-af59-4f6c-90cf-9ce6daebfa09">
+	<property name="ireport.zoom" value="0.7513148009015777"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tgl" class="java.lang.String"/>
+	<parameter name="tgl2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from t_suratmasuk where tanggal_diterima between $P{tgl} AND $P{tgl2}]]>
+	</queryString>
+	<field name="no_surat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_surat" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_diterima" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="perihal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_jenis_surat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pengirim" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tujuan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="deskripsi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="587c4a12-7222-4233-8dd8-118028a46728"/>
+				<staticText>
+					<reportElement x="20" y="20" width="234" height="43" forecolor="#FFFFFF" uuid="a1f52940-99f9-4a11-96d7-cf3ce2c46ca9"/>
+					<textElement>
+						<font fontName="Poor Richard" size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Bird Mail]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="a8dbb10d-910f-40ee-85b4-13e951ecc96c"/>
+					<textElement textAlignment="Right">
+						<font fontName="Poor Richard" size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Report Surat Masuk]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="f06e7342-41f0-421f-9d12-b7d9a5da2bec"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f5c66f63-1fb7-4b2f-be20-5a0437535671"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[no_surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="69" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="678ba6c8-60c9-47f0-9c85-326a117f45e2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tanggal_surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="138" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="fc1624cc-c118-48b3-acc0-b0aad6dcce7e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tanggal_diterima]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="207" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a83d449a-68da-42ea-92c8-c2374e5eb66e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[perihal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="276" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="c73bc95b-9b8a-41c6-be16-6c25a4e0155d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[id_jenis_surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="345" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="07b399fd-c937-4fcd-a570-5dbbec224363"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[pengirim]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="414" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="7b2d5105-8153-437d-adb7-6e7ddc6f89dc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[tujuan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="483" y="0" width="69" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="0a8b5a45-d17b-45f8-99df-47dfbb9bb2ee"/>
+				<textElement textAlignment="Center">
+					<font fontName="Poor Richard" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[deskripsi]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="f143643c-5a80-4eeb-abb1-8499bad58934"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="69" height="20" uuid="11d4c36e-5fe5-484e-a01e-a16334fcd9a9"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_surat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="69" y="0" width="69" height="20" uuid="bd322d8f-30a2-4e72-8d39-72d949d2f305"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal_surat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="138" y="0" width="69" height="20" uuid="53380e09-eb78-4158-9f32-3d50503a3d0d"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal_diterima}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="207" y="0" width="69" height="20" uuid="4431e8d4-da16-4b30-95b4-d980c251f3c8"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{perihal}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="276" y="0" width="69" height="20" uuid="597cf610-fb30-4ef1-a920-d118630952cd"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_jenis_surat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="345" y="0" width="69" height="20" uuid="ca9716dd-9a11-4197-b5d3-448a0abf89c6"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pengirim}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="414" y="0" width="69" height="20" uuid="be7c48ab-ad1a-4e08-be2d-55084a54aaaa"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tujuan}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="483" y="0" width="69" height="20" uuid="5366f44b-81c6-4c06-bf7b-073a06e02c8b"/>
+				<textElement>
+					<font fontName="Poor Richard" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{deskripsi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="c56e5ec1-21a3-4fae-896f-d89deacb6379"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="7708da99-6936-430b-bd7a-056b806001db"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="29e9b726-1c56-4da0-95ff-7ce99b08e404"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
